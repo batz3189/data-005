@@ -1,0 +1,201 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f29\froman\fcharset238\fprq2 Times New Roman CE;}{\f30\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f32\froman\fcharset161\fprq2 Times New Roman Greek;}{\f33\froman\fcharset162\fprq2 Times New Roman Tur;}
+{\f34\froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\f35\froman\fcharset178\fprq2 Times New Roman (Arabic);}{\f36\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f37\fswiss\fcharset238\fprq2 Arial CE;}{\f38\fswiss\fcharset204\fprq2 Arial Cyr;}
+{\f40\fswiss\fcharset161\fprq2 Arial Greek;}{\f41\fswiss\fcharset162\fprq2 Arial Tur;}{\f42\fswiss\fcharset177\fprq2 Arial (Hebrew);}{\f43\fswiss\fcharset178\fprq2 Arial (Arabic);}{\f44\fswiss\fcharset186\fprq2 Arial Baltic;}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;
+\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 
+\fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}}{\info{\author EZEKIEL}{\operator EZEKIEL}{\creatim\yr2007\mo1\dy6\hr18\min4}{\revtim\yr2007\mo1\dy6\hr18\min21}{\version2}{\edmins17}
+{\nofpages5}{\nofwords1268}{\nofchars7233}{\*\company LEVITICALHEBREW}{\nofcharsws8882}{\vern8247}}\widowctrl\ftnbj\aenddoc\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\hyphcaps0\horzdoc\dghspace120\dgvspace120\dghorigin1701\dgvorigin1984
+\dghshow0\dgvshow3\jcompress\viewkind1\viewscale100\nolnhtadjtbl \fet0\sectd \linex0\sectdefaultcl {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3
+\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}
+{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain 
+\ql \li0\ri0\nowidctlpar\faauto\rin0\lin0\itap0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\f1\fs20 Changing Your MAC Address In Window XP/Vista, Linux And Mac OS X
+\par (Sometimes known as MAC spoofing)
+\par 
+\par  
+\par 
+\par First let me explain a few things about MAC addresses. MAC stands for Media Access Control and in a sense the MAC address is a computer\rquote s true name on a 
+LAN. An Ethernet MAC address is a six byte number, usually expressed as a twelve digit hexadecimal number (Example: 1AB4C234AB1F).
+\par 
+\par  
+\par 
+\par IPs are translated to MAC address by a protocol called ARP (Address Resolution Protocol). Let\rquote s say a computer with and I
+P of 192.168.1.1 wants to send information to another computer on the LAN that has an IP of 192.168.1.2 . First 192.168.1.1 will send out a broadcast to all stations on the LAN asking who has the IP 192.168.1.2. Then the box that has 192.168.1.2 will resp
+ond to 192.168.1.1 with it\rquote s MAC address which is cached in 192.168.1.1\rquote s ARP table for later use. To put this in Socratic Dialog form (with just a touch of Stallone):
+\par 
+\par  
+\par 
+\par Host 1 (192.168.1.1): Yo everyone on the LAN (FF:FF:FF:FF:FF:FF), who has the IP 192.168.1.2? My MAC is DE:AD:BE:EF:CA:FE so you can respond back to me.
+\par 
+\par Host 2 (192.168.1.2): Hello DE:AD:BE:EF:CA:FE, I have IP 192.168.1.2 and my MAC address is 12:34:56:78:90:12 so you can send your IP packets to me.
+\par 
+\par  
+\par 
+\par  You can see the ARP table of a box by dropping out to a command prompt and typing \'93arp \endash a\'94 in Windows or just \'93arp\'94
+ in Linux. ARP can also work the other way by a host on the LAN sending its MAC address to another machine on the LAN for preemptive caching unless the host is configured to not accept un-requested ARP replies.
+\par 
+\par  
+\par 
+\par  A person might want to change the MAC address of a NIC for many reasons:
+\par 
+\par  
+\par 
+\par    1. To get past MAC address filtering on a router. Valid MAC addresses can be found by sniffing them and then the deviant user could ass
+ume the MAC of a valid host. Having two hosts on the same network can cause some network stability problems, but much of the time it's workable. This is one of the reasons why MIC Address filtering on a wireless router is pointless. An attacker can just s
+niff the MAC address out of the air while in monitor mode and set his WiFi NIC to use it. Interestingly, a lot of hotels use MAC filtering in their "pay to surf" schemes, so this method can be an instant in for cheap skate road warriors. 
+\par    2. Sniffing other connections on the network. By assuming another host's MAC as their own they may receive packets not meant for them. However, ARP poisoning is generally a better method than MAC spoofing to accomplish this task.
+\par    3. So as to keep their burned in MAC a
+ddress out of IDS and security logs, thus keeping deviant behavior from being connected to their hardware. For example, two of the main things a DHCP server logs when it leases an IP to a client is the MAC address and host name. If you have a wireless rou
+ter look around on it's web interface for where it logs this info. Luckily there are tools to randomize this information (MadMACs).
+\par   
+\par  4. To pull off a denial of service attack, for instance assuming the MAC of the gateway to a sub net might cause traffic problems. Also, a lot of WiFi routers will lock up if a client tries to connect with the same MAC as the router's BSSID.
+\par 
+\par Linux
+\par 
+\par To change your MAC address in Linux (and most *nix system) is easy as pie. All it takes is two easy to script commands:
+\par 
+\par  
+\par 
+\par     ifconfig eth0 down hw ether 00:00:00:00:00:01
+\par 
+\par     ifconfig eth0 up
+\par 
+\par  
+\par 
+\par These two little commands would set your eth0 interface to use the MAC 00:00:00:00:00:01. Just plug in the NIC you want to set and the MAC address you want to use into the commands ab
+ove and your done. Changing your MAC address is one of those things that is much easier to do in Linux then under Windows.
+\par 
+\par  
+\par 
+\par Mac OS X
+\par 
+\par  
+\par 
+\par         For versions of OS X before Tiger (OS X 10.4) you will need this patch:
+\par 
+\par  
+\par 
+\par     http://slagheap.net/etherspoof/
+\par 
+\par  
+\par 
+\par Then you use a command like:
+\par 
+\par  
+\par 
+\par     }{\f1\fs20\lang11274\langfe1033\langnp11274 sudo ifconfig en0 lladdr 00:00:00:00:00:01
+\par 
+\par  
+\par 
+\par }{\f1\fs20 I'm not much of a Macintosh guy, so I pulled most of this info from:
+\par 
+\par http://www.macgeekery.com/gspot/2006-04/mac_address_spoofing
+\par 
+\par  
+\par 
+\par My understanding is that there are complications with some AirPort cards so you may also want to read:
+\par 
+\par http://rgov.org/airport-spoof/
+\par 
+\par  
+\par 
+\par Windows 2000/XP/Vista: The Hard Way
+\par 
+\par             In XP you can use the regedit to edit the registry from a GUI or the reg command to edit it from the console, I\rquote ll be using regedit. Information on all your NICs can be found the registry key HKEY_LOCAL_MACHINE\\SYSTEM\\
+CurrentControlSet\\Control\\Class\\\{4D36E972-E325-11CE-BFC1-08002bE10318\}\\  . Under this key you will find a bunch of sub keys labeled as 
+0000, 00001, 0002 and so forth. We can assume any MAC address we want by finding the key that controls the NIC we want to change, putting in a string value called \'93NetworkAddress\'94
+ and setting it to the MAC address we want to use formatted as a twelve digit hex number (example: 000000000001). To find out which key is which we can search through them for the value \'93DriverDesc\'94
+ until we find the one that matches the NIC we wish to alter. After you set \'93NetworkAddress\'94 to the address you want just restart the N
+IC by disabling it then enabling it (or in the case of PCMCIA cards, just eject and reinsert). You can confirm the MAC address change by using the \'93getmac\'94 or \'93ipconfig /all\'94 commands.
+\par 
+\par  
+\par 
+\par Windows 2000/XP/Vista: The Easy Way
+\par 
+\par  
+\par 
+\par             Use Mac Makeup 
+( http://www.gorlani.com/publicprj/macmakeup/macmakeup.asp ), MadMACs (http://www.irongeek.com/i.php?page=security/madmacs-mac-spoofer), Smac ( http://www.klcconsulting.net/smac/ ) or Etherchange (http://ntsecurity.nu/toolbox/etherchange/ ). Mac Makeup is
+ 
+a cool little GUI and Command line tool that's freeware, the creator also offers a Plugin for Bart's PE builder. MadMACs is a tool to randomize your MAC address and host name on every reboot. Smac has a nice GUI and was free but has since gone commercial,
+ there's no reason to bother with it as there are free tools that are just as good. I use MadMACs since I wrote it and it lets me keep my host information randomized.
+\par 
+\par  
+\par 
+\par         Have fun with your MAC addresses switching, but be careful not to cause network problems. My favorite MAC address is DEADBEEFCAFE, for other interesting MACs see:
+\par 
+\par  
+\par 
+\par http://www.binrev.com/forums/index.php?showtopic=15942
+\par 
+\par  
+\par 
+\par Enjoy.
+\par 
+\par  
+\par 
+\par  
+\par 
+\par After Notes:
+\par 
+\par After I posted my article Benjamin E. Pratt emailed me some other notes on changing your MAC address on different platforms and in different ways:
+\par BSD
+\par 
+\par 1) Bring down the interface: "ifconfig xl0 down"
+\par 
+\par 2) Enter new MAC address: "ifconfig xl0 link 00:00:00:AA:AA:AA"
+\par 
+\par 3) Bring up the interface: "ifconfig xl0 up"
+\par 
+\par Linux
+\par 
+\par 1) Bring down the interface: "ifconfig eth0 down"
+\par 
+\par 2) Enter new MAC address: "ifconfig eth0 hw ether 00:00:00:AA:AA:AA"
+\par 
+\par 3) Bring up the interface: "ifconfig eth0 up"
+\par 
+\par Windows 2000/XP
+\par Method 1:
+\par 
+\par This is depending on the type of Network Interface Card (NIC) you have. If you have a card that doesn\rquote t support Clone MAC address, then you have to go to second method.
+\par 
+\par a) Go to Start->Settings->Control Panel and double click on Network and Dial-up Connections.
+\par 
+\par b) Right click on the NIC you want to change the MAC address and click on properties.
+\par 
+\par c) Under "General" tab, click on the "Configure" button
+\par 
+\par d) Click on "Advanced" tab
+\par 
+\par e) Under "Property section", you should see an item called "Network Address" or "Locally Administered Address", click on it.
+\par 
+\par f) On the right side, under "Value", type in the New MAC address you want to assign to your NIC. Usually this value is entered without the "-" between the MAC address numbers.
+\par 
+\par g) Goto command prompt and type in "ipconfig /all" or "net config rdr" to verify the changes. If the changes are not materialized, then use the second method.
+\par 
+\par h) If successful, reboot your system.
+\par 
+\par Method 2:
+\par 
+\par This should work on all Windows 2000/XP systems
+\par 
+\par a) Go to Start -> Run, type "regedt32" to start registry editor. Do not use "Regedit".
+\par 
+\par b) Go to "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Class\\\{4D36E972-E325-11CE-BFC1-08002BE10318\}
+". Double click on it to expand the tree. The subkeys are 4-digit numbers, which represent particular network adapters. You should see it starts with 0000, then 0001, 0002, 0003 and so on.
+\par 
+\par c) Find the interface you want by searching for the proper "DriverDesc" key.
+\par 
+\par d) Edit, or add, the string key "NetworkAddress" (has the data type "REG_SZ") to contain the new MAC address.
+\par 
+\par e) Disable then re-enable the network interface that you changed (or reboot the system).
+\par 
+\par Method 3:
+\par 
+\par Use the program Etherchange from http://ntsecurity.nu/toolbox/etherchange/
+\par 
+\par Windows 9x
+\par 
+\par Use the same method as Windows 2000/XP except for the registry key location is "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Class\\Net" and you must reboot your system.
+\par }}
