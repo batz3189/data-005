@@ -1,0 +1,329 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="原创Oracle视频教程.files/filelist.xml">
+<title>原创Oracle视频教程</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>微软用户</o:Author>
+  <o:LastAuthor>微软用户</o:LastAuthor>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>13</o:TotalTime>
+  <o:Created>2013-10-11T06:17:00Z</o:Created>
+  <o:LastSaved>2013-10-11T06:30:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>197</o:Words>
+  <o:Characters>1128</o:Characters>
+  <o:Company>微软中国</o:Company>
+  <o:Lines>9</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1323</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:853768321;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1913666812 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ZH-CN link=blue vlink=purple style='tab-interval:21.0pt;text-justify-trim:
+punctuation'>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>原创</span><span lang=EN-US>Oracle</span><span
+style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman"'>视频教程</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+"Times New Roman"'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=131">Linux<span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'><span lang=EN-US>环境<span lang=EN-US>下</span></span></span>oracle<span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'><span lang=EN-US>的<span lang=EN-US>安装<span
+lang=EN-US>（<span lang=EN-US>一<span lang=EN-US>）</span></span></span></span></span></span></a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+"Times New Roman"'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=139">Linux<span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'><span lang=EN-US>环境<span lang=EN-US>下</span></span></span>oracle<span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'><span lang=EN-US>的<span lang=EN-US>安装<span
+lang=EN-US>（<span lang=EN-US>二<span lang=EN-US>）</span></span></span></span></span></span></a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+"Times New Roman"'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=147"><span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'><span lang=EN-US>命令<span lang=EN-US>行模式<span
+lang=EN-US>下<span lang=EN-US>安装</span></span></span></span></span>Oracle</a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span class=MsoHyperlink><span
+lang=EN-US style='mso-fareast-font-family:"Times New Roman";text-decoration:
+none;text-underline:none'><span style='mso-list:Ignore'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:Tahoma;background:white'><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=148" target="_blank">Oracle
+11g <span lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;
+mso-hansi-font-family:Tahoma'><span lang=EN-US>使用</span></span>DBCA<span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;mso-hansi-font-family:
+Tahoma'><span lang=EN-US>工具图<span lang=EN-US>形化界面创建<span lang=EN-US>数据库</span></span></span></span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><o:p></o:p></span></a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span class=MsoHyperlink><span
+lang=EN-US style='mso-fareast-font-family:"Times New Roman";text-decoration:
+none;text-underline:none'><span style='mso-list:Ignore'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:Tahoma;background:white'><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=155" target="_blank">Oracle
+11g <span lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;
+mso-hansi-font-family:Tahoma'><span lang=EN-US>使用</span></span>DBCA<span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;mso-hansi-font-family:
+Tahoma'><span lang=EN-US>工具非交互<span lang=EN-US>式模式下创建<span lang=EN-US>数据库</span></span></span></span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><o:p></o:p></span></a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span class=MsoHyperlink><span
+lang=EN-US style='mso-fareast-font-family:"Times New Roman";text-decoration:
+none;text-underline:none'><span style='mso-list:Ignore'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:Tahoma;background:white'><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=216" target="_blank">SQL<span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;mso-hansi-font-family:
+Tahoma'><span lang=EN-US>基<span lang=EN-US>础简介</span></span></span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><o:p></o:p></span></a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span class=MsoHyperlink><span
+lang=EN-US style='mso-fareast-font-family:"Times New Roman";text-decoration:
+none;text-underline:none'><span style='mso-list:Ignore'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:Tahoma;background:white'><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=215" target="_blank"><span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;mso-hansi-font-family:
+Tahoma'><span lang=EN-US>基本</span></span><span lang=EN-US><span lang=EN-US> SELECT
+</span></span><span lang=EN-US style='font-family:宋体;mso-ascii-font-family:
+Tahoma;mso-hansi-font-family:Tahoma'><span lang=EN-US>语句</span></span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><o:p></o:p></span></a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span class=MsoHyperlink><span
+lang=EN-US style='mso-fareast-font-family:"Times New Roman";text-decoration:
+none;text-underline:none'><span style='mso-list:Ignore'>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:Tahoma;background:white'><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=227" target="_blank">SELECT
+<span lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;mso-hansi-font-family:
+Tahoma'><span lang=EN-US>语句中<span lang=EN-US>的算术表达式<span lang=EN-US>和空值</span></span></span></span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><o:p></o:p></span></a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span class=MsoHyperlink><span
+lang=EN-US style='mso-fareast-font-family:"Times New Roman";text-decoration:
+none;text-underline:none'><span style='mso-list:Ignore'>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:Tahoma;background:white'><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=228" target="_blank"><span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;mso-hansi-font-family:
+Tahoma'><span lang=EN-US>列别名</span></span><span style='font-size:10.5pt;
+mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><o:p></o:p></span></a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span class=MsoHyperlink><span
+lang=EN-US style='mso-fareast-font-family:"Times New Roman";text-decoration:
+none;text-underline:none'><span style='mso-list:Ignore'>10.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></span><![endif]><span
+lang=EN-US style='font-size:10.0pt;font-family:Tahoma;background:white'><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=229" target="_blank"><span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;mso-hansi-font-family:
+Tahoma'><span lang=EN-US>连接运算符、文字字符<span lang=EN-US>串<span lang=EN-US>、其他引号运算符和</span></span></span></span>
+DISTINCT <span lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;
+mso-hansi-font-family:Tahoma'><span lang=EN-US>关键字<span lang=EN-US>的用法</span></span></span><span
+style='font-size:10.5pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman"'><o:p></o:p></span></a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span lang=EN-US style='font-size:
+10.0pt;font-family:Tahoma;mso-fareast-font-family:Tahoma'><span
+style='mso-list:Ignore'>11.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:Tahoma;background:white'><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=237" target="_blank"><span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;mso-hansi-font-family:
+Tahoma'><span lang=EN-US>对数据进<span lang=EN-US>行<span lang=EN-US>限制和排序（一）</span></span></span></span></a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+"Times New Roman"'><span style='mso-list:Ignore'>12.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:Tahoma;background:white'><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=247" target="_blank"><span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;mso-hansi-font-family:
+Tahoma'><span lang=EN-US>对数据进行<span lang=EN-US>限制与排序（二）</span></span></span></a></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+"Times New Roman"'><span style='mso-list:Ignore'>13.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:10.0pt;
+font-family:Tahoma;background:white'><a
+href="http://www.17xueit.com/course/showvideo.html?cptwid=248" target="_blank"><span
+lang=EN-US style='font-family:宋体;mso-ascii-font-family:Tahoma;mso-hansi-font-family:
+Tahoma'><span lang=EN-US>使用单行函<span lang=EN-US>数<span lang=EN-US>定<span
+lang=EN-US>制输出（一）</span></span></span></span></span></a></span></p>
+
+</div>
+
+</body>
+
+</html>
