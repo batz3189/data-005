@@ -1,0 +1,112 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Verdana;}{\f1\froman\fcharset0 Times New Roman;}{\f2\fswiss\fcharset0 Arial;}{\f3\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;}
+\viewkind4\uc1\pard\b\f0\fs20 In this tutorial i'm going to write the ways that you can secure your IIS servers against hackers , So Let's Start :\par
+\fs24\par
+Secure Telnet Server \par
+\pard\sb100\sa100\b0\fs18 If you plan to use the Telnet server included with Windows 2000, you should consider restricting the users who can access the service. To do this, perform the following steps: \par
+\pard\fi-360\li720\sb100\sa100\tx720 1 . Open the Local Users And Groups tool. \par
+2 . Right-click the Group node, and choose New Group from the context menu. \par
+3 . Enter TelnetClients in the Group name box. \par
+4 . Click Add, and add the users who are to have telnet access to the computer. \par
+5 . Click Create and then Close \par
+\pard\sb100\sa100 When the TelnetClients group exists, the Telnet service will allow only those users defined in the group to have access to the server\f1\fs24\par
+\pard\keepn\sb100\sa100\b\f0 Review, Update, and Deploy the Provided Hisecweb.inf Security Template\par
+\pard\sb100\sa100\b0\fs18 Microsoft've included a security template, named Hisecweb.inf, as a baseline applicable to most secure Web sites. The template configures basic Windows 2000 systemwide policy. \par
+\b Hisecweb.inf can be downloaded from: \b0\par
+\cf1\ul http://support.microsoft.com/support/misc/kblookup.asp?id=Q316347\cf0\ulnone\par
+Perform these steps to use the template: \par
+\pard\fi-360\li720\sb100\sa100\tx720 1. Copy the template to the %windir%\\security\\templates directory. \par
+2. Open the Security Templates tool, and look over the settings. \par
+3. Open the Security Configuration And Analysis tool, and load the template. \par
+4. Right-click the Security Configuration And Analysis tool, and choose Analyze Computer Now from the context menu. \par
+5. Wait for the work to complete. \par
+6. Review the findings, and update the template as necessary. \par
+Once you're happy with the template, right-click the Security Configuration And Analysis tool and choose Configure Computer Now from the context menu. \par
+\pard\sb100\sa100\b\fs24 Disable or Remove All Sample Applications\b0\par
+\fs18 Samples are just that, samples; they are not installed by default and should never be installed on a production server. Note that some samples install so that they can be accessed only from http://localhost, or 127.0.0.1; however, they should still be removed.\par
+Sample                    Virtual Directory                 Location\par
+IIS Samples                  \\IIS Samples         c:\\inetpub\\iissamples\par
+IIS Documentation        \\IISHelp               c:\\winnt\\help\\iishelp\par
+Data Access                  \\MSADC                c:\\program files\\common files\\system\\msadc\par
+\f1\fs24\line\f0\fs18 * Be careful that MSADC scripts can be the way for attacker to obtain gain access to your system , so be sure to remove them .\par
+\pard\keepn\sb100\sa100\b\fs24 Disable or Remove Unneeded COM Components \fs18\par
+\pard\sb100\sa100\b0 Some COM components are not required for most applications and should be removed. Most notably, consider disabling the File System Object component, but note that this will also remove the Dictionary object. Be aware that some programs might require components you're disabling. For example, Site Server 3.0 uses File System Object. The following command will disable File System Object: \par
+regsvr32 scrrun.dll /u \f1\fs24\par
+\pard\keepn\sb100\sa100\b\f0 Remove the IISADMPWD Virtual Directory \par
+\pard\sb100\sa100\b0\fs18 This directory allows you to reset Windows NT and Windows 2000 passwords. It's designed primarily for intranet scenarios and is not installed as part of IIS 5, but it is not removed when an IIS 4 server is upgraded to IIS 5. It should be removed if you don't use an intranet or if you connect the server to the Web.\fs24\par
+\pard\keepn\sb100\sa100\b Disable Parent Paths\fs36\par
+\pard\sb100\sa100\b0\fs18 The Parent Paths option allows you to use ".." in calls to functions such as \i MapPath\i0 . By default, this option is enabled, and you should disable it. Follow this procedure to disable the option: \par
+\pard\fi-360\li720\sb100\sa100\tx720 1. Right-click the root of the Web site, and choose Properties from the context menu. \par
+2. Click the Home Directory tab. \par
+3. Click Configuration. \par
+4. Click the App Options tab. \par
+5. Uncheck the Enable Parent Paths check box. \par
+\pard\keepn\sb100\sa100\b\fs24 Set Appropriate IIS Log File ACLs\fs36  \par
+\pard\sb100\sa100\b0\fs18 Make sure the ACLs on the IIS-generated log files (%systemroot%\\system32\\LogFiles) are \par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sb100\sa100 Administrators (Full Control) \par
+{\pntext\f3\'B7\tab}System (Full Control) \par
+{\pntext\f3\'B7\tab}Everyone (RWC) \par
+\pard\sb100\sa100 This is to help prevent malicious users deleting the files to cover their tracks. \par
+\par
+\b\fs24 Remove dangerous script mappings\b0\line If you don't use the following script types, remove their mappings:\par
+\trowd\cellx5184\cellx8448\pard\intbl\b\fs18 Script Type\b0\cell\b Mapping\b0\cell\row
+\intbl Web-based password reset\cell .htr\cell\row
+\intbl Internet Database Connector\cell .idc\cell\row
+\intbl Server-Side Includes\cell .stm .shtml .shtm\cell\row
+\intbl Internet Printing\cell .printer\cell\row
+\intbl Index Server\cell .ida .idq .hta\cell\row
+\pard\sb100\sa100 Microsoft IIS is preconfigured to support common filename extensions, such as .asp and .shtm files. When IIS receives a request for a file of these types, the call is handled by a DLL. If you do not require use any of these extensions or functionality, remove the mappings: \line\line To remove unused file type mappings: \par
+\pard\fi-360\li720\sb100\sa100\tx720 Open Internet Services Manager. \par
+Right-click the Web server and choose Properties from the context menu. \par
+In Master Properties, select WWW Service and click Edit. \par
+In the HomeDirectory tab, click Configuration. \par
+Remove the following mappings for functionality that is not needed:\line\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li1440\sb100\sa100 Web-based password reset: .htr \par
+{\pntext\f3\'B7\tab}Internet Database Connector: .idc (all IIS 5 Web sites should use ADO or similar technology) \par
+{\pntext\f3\'B7\tab}Server-Side Includes: .stm, .shtm and .shtml \par
+{\pntext\f3\'B7\tab}Internet Printing: .printer \par
+{\pntext\f3\'B7\tab}Index Server: .htw, .ida and .idq \par
+\pard\sb100\sa100\b\fs16\par
+About .ida Overflow :\par
+\b0 As part of its installation process, IIS installs several ISAPI extensions - .dlls that provide extended functionality. Among these is idq.dll, which is a component of Index Server (known in Windows 2000 as Indexing Service) and provides support for administrative scripts (.ida files) and Internet Data Queries (.idq files). \line A security vulnerability exists in idq.dll. This DLL contains an unchecked buffer in a section of code that handles input URLs. An attacker who could establish a web session with a server on which idq.dll is installed could conduct a buffer-overrun attack and execute code on the web server. Idq.dll runs in the System context, so exploiting the vulnerability would give the attacker complete control of the server and allow him to take any desired action on it. \line The buffer overrun occurs before any indexing functionality is requested. As a result, even though idq.dll is a component of Index Server/Indexing Service, the service would not need to be running in order for an attacker to exploit the vulnerability. As long as the script mapping for .idq or .ida files were present and the attacker were able to establish a web session, he could exploit the vulnerability. \line Clearly, this is a serious vulnerability, and Microsoft urges all customers to take action immediately. Customers who cannot install the patch can protect their systems by removing the script mappings for .idq and .ida files via the Internet Services Manager in IIS. \par
+\b Patch for .ida overflow :\fs20  \b0\line * Windows NT 4.0:\line\cf1\ul http://www.microsoft.com/Downloads/Release.asp?ReleaseID=30833\cf0\ulnone\line * Windows 2000 Professional, Server and Advanced Server:\line\cf1\ul http://www.microsoft.com/Downloads/Release.asp?ReleaseID=30800\par
+\cf0\ulnone\b\fs16 About .Printer  Overflow :\b0\fs20\line\fs18 Windows 2000 Internet printing ISAPI extension contains msw3prt.dll which handles user requests. Due to an unchecked buffer in msw3prt.dll, a maliciously crafted HTTP .printer request containing approx 420 bytes in the 'Host:' field will allow the execution of arbitrary code. Typically a web server would stop responding in a buffer overflow condition; however, once Windows 2000 detects an unresponsive web server it automatically performs a restart. Therefore, the administrator will be unaware of this attack.\f1\par
+\b\f0\fs16 Remove .Printer  Overflow : \b0\f1\fs18\par
+\cf1\ul\f0\fs16 http://download.microsoft.com/download/win2000platform/Patch/q296576/NT5/EN-US/Q296576_W2K_SP2_x86_en.EXE\cf0\ulnone\par
+\b Patch for .htr Overflow :\b0\par
+\fs20 Internet Information Server 4.0:\line\cf1\ul http://www.microsoft.com/Downloads/Release.asp?ReleaseID=20905\par
+\cf0\ulnone To verify that the patch has been installed on the machine, confirm that the following registry key has been created on the machine: \line HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Hotfix\\Q321599. \line\line - Internet Information Server 5.0:\line\cf1\ul http://www.microsoft.com/Downloads/Release.asp?ReleaseID=20903\par
+\cf0\ulnone\line To verify that the patch has been installed on the machine, confirm that the following registry key has been created on the machine: \line HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Updates\\Windows 2000\\SP3\\Q321599. \line\line To verify the individual files, use the date/time and version information provided in the following registry key: \line HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Updates\\Windows 2000\\SP3\\Q321599\\Filelist\par
+\f1\fs24\line\pard\keepn\sb100\sa100\b\f0 Set Appropriate ACLs on Virtual Directories\f1\fs36\par
+\pard\sb100\sa100\b0\f0\fs18 Although this procedure is somewhat application-dependent, some rules of thumb apply, as described in Table F-1. \par
+\trowd\trgaph75\clbrdrt\brdrw15\brdrs\clbrdrl\brdrw15\brdrs\clbrdrb\brdrw15\brdrs\clbrdrr\brdrw15\brdrs \cellx4212\clbrdrt\brdrw15\brdrs\clbrdrl\brdrw15\brdrs\clbrdrb\brdrw15\brdrs\clbrdrr\brdrw15\brdrs \cellx8424\pard\intbl\b File Type \cell Access Control Lists \cell\row
+\b0\trowd\trgaph75\clbrdrt\brdrw15\brdrs\clbrdrl\brdrw15\brdrs\clbrdrb\brdrw15\brdrs\clbrdrr\brdrw15\brdrs \cellx4212\clbrdrt\brdrw15\brdrs\clbrdrl\brdrw15\brdrs\clbrdrb\brdrw15\brdrs\clbrdrr\brdrw15\brdrs \cellx8424\intbl CGI (.exe, .dll, .cmd, .pl)\cell Everyone (X) Administrators (Full Control) \cell\row
+\intbl Script files (.asp)\cell Everyone (X) Administrators (Full Control) \cell\row
+\intbl Include files (.inc, .shtm, .shtml)\cell Everyone (X) Administrators (Full Control) \cell\row
+\intbl Static content (.txt, .gif, .jpg, .html)\cell Everyone (R) Administrators (Full Control) \cell\row
+\pard\sb100\sa100\b Recommended default ACLs by file type.\b0  \par
+Rather than setting ACLs on each file, you're better off creating new directories for each file type, setting ACLs on the directory, and allowing the ACLs to inherit to the files. For example, a directory structure might look like this: \par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sb100\sa100 c:\\inetpub\\wwwroot\\myserver\\static (.html) \par
+{\pntext\f3\'B7\tab}c:\\inetpub\\wwwroot\\myserver\\include (.inc) \par
+{\pntext\f3\'B7\tab}c:\\inetpub\\wwwroot\\myserver\\script (.asp) \par
+{\pntext\f3\'B7\tab}c:\\inetpub\\wwwroot\\myserver\\executable (.dll) \par
+{\pntext\f3\'B7\tab}c:\\inetpub\\wwwroot\\myserver\\images (.gif, .jpeg) \par
+\pard\sb100\sa100 Also, be aware that two directories need special attention: \par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent360{\pntxtb\'B7}}\fi-360\li720\sb100\sa100 c:\\inetpub\\ftproot (FTP server) \par
+{\pntext\f3\'B7\tab}c:\\inetpub\\mailroot (SMTP server) \par
+\pard\sb100\sa100 The ACLs on both these directories are Everyone (Full Control) and should be overridden with something tighter depending on your level of functionality. Place the folder on a different volume than the IIS server if you're going to support Everyone (Write), or use Windows 2000 disk quotas to limit the amount data that can be written to these directories. \par
+\line\fs20 Microsoft has released Security tools As IIS LockDown Tool & URLScan \par
+Download URLScan :\par
+http://microsoft.com/downloads/details.aspx?FamilyId=23D18937-DD7E-4613-9928-7F94EF1C902A&displaylang=en\par
+Download IIS LockDown  :\par
+http://www.microsoft.com/downloads/release.asp?ReleaseID=43955\fs24\par
+\b By : Ehsan Omidvar\par
+ehsan_omidvar@mail.com\par
+\par
+\b0\f1\par
+\fs18\par
+\par
+\fs24\par
+\pard\f2\fs20\par
+}
+ 
