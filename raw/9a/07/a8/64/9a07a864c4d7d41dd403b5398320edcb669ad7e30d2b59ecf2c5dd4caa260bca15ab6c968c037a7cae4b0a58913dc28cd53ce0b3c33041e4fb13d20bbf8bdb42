@@ -1,0 +1,373 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+\viewkind4\uc1\pard\f0\fs20 This is a list of Unix programs. Some of these programs are standard utilities that will be found on any Unix or Unix-like operating system; indeed a system without such basic components as ls, sh and ed could scarcely be described as truly Unix-like. Others are more special-purpose and may not be installed by default but may be available as ready-to-install third party packages. Finally, some items on this list are simply separate applications which happen to have been written for Unix.\par
+\par
+Many MS-DOS commands are similar to, or based on these commands. See List of DOS commands for more information.\par
+Contents\par
+[hide]\par
+\par
+    * 1 System software\par
+          o 1.1 General user\par
+          o 1.2 System Management\par
+                + 1.2.1 Kernel specific\par
+                + 1.2.2 Processes and tasks management\par
+                + 1.2.3 User management and support\par
+                + 1.2.4 Terminal configuration\par
+          o 1.3 Files and texts\par
+                + 1.3.1 Filesystem Utilities\par
+                + 1.3.2 Archivers and compression\par
+                + 1.3.3 Text Processing\par
+                + 1.3.4 Text editors\par
+          o 1.4 Communication, networking and remote access\par
+                + 1.4.1 Email programs (user agents)\par
+                + 1.4.2 Network system services\par
+                + 1.4.3 Network Utilities\par
+                + 1.4.4 Network monitoring and security\par
+          o 1.5 Programming tools\par
+                + 1.5.1 Script Interpreters\par
+                      # 1.5.1.1 Shells\par
+                      # 1.5.1.2 Non-shells\par
+                + 1.5.2 Compilers and Programming tools\par
+                + 1.5.3 Scripting utilities\par
+          o 1.6 User interfaces\par
+                + 1.6.1 Desktops/Graphical User Interfaces\par
+                + 1.6.2 Shells\par
+          o 1.7 Computer security\par
+                + 1.7.1 Antivirus software\par
+                + 1.7.2 Cryptography\par
+          o 1.8 Package management software\par
+          o 1.9 OS X/Darwin specific programs\par
+    * 2 Application software\par
+          o 2.1 Office\par
+          o 2.2 Multimedia\par
+          o 2.3 Web browsers\par
+          o 2.4 Desktop Publishing\par
+          o 2.5 Databases\par
+          o 2.6 Mathematical and scientific software\par
+          o 2.7 Desktop utilities\par
+          o 2.8 Radio Amateur utilities\par
+    * 3 See also\par
+    * 4 External links\par
+\par
+[edit] System software\par
+\par
+[edit] General user\par
+\par
+    * dd \endash  Convert and copy a file (Disk Dump)\par
+    * dirname \endash  Strip non-directory suffixes from a path\par
+    * echo \endash  Print to standard output\par
+    * env \endash  Show environment variables; run a program with altered environment variables\par
+    * file (or stat) \endash  Determine the type of a file\par
+    * nohup \endash  Run a command with immunity to hangups outputting to non-tty\par
+    * sh \endash  The Bourne shell, the standard Unix shell\par
+    * uptime \endash  Print how long the system has been running\par
+\par
+[edit] System Management\par
+\par
+    * fuser \endash  Identify processes by files or sockets\par
+    * logger \endash  Make entries in the system log\par
+    * newgrp (or sg) \endash  Log in to a new group\par
+    * pathchk \endash  Check the validity/portability of filenames\par
+\par
+[edit] Kernel specific\par
+\par
+    * date \endash  Print or set the system date and/or time\par
+    * dmesg \endash  Print the kernel message buffer\par
+    * ipcrm \endash  Remove a message queue, semaphore set or shared memory id\par
+    * ipcs \endash  Provide information on IPC facilities\par
+    * uname \endash  Print assorted system statistics\par
+\par
+[edit] Processes and tasks management\par
+\par
+    * anacron \endash  Periodic command scheduler\par
+    * at \endash  Single-time command scheduler\par
+    * chroot \endash  Change the system root directory for all child processes\par
+    * cron \endash  Periodic command scheduler\par
+    * crontab \endash  Crontab file editor\par
+    * daemonic \endash  Interface to daemon init scripts\par
+    * htop \endash  Interactive ncurses-based process viewer that allows scrolling to see all processes and their full command lines\par
+    * kill \endash  Send a signal to process, or terminate a process (by PID)\par
+    * killall \endash  Terminate all processes (in GNU/Linux, it's kill by name)\par
+    * nice \endash  Alter priorities for processes\par
+    * pgrep \endash  Find PIDs of processes by name\par
+    * pidof \endash  GNU/Linux equivalent of pgrep\par
+    * pkill \endash  Send a signal to process, or terminate a process (by name). Equivalent to Linux killall\par
+    * ps \endash  Report process status\par
+    * renice \endash  Alter the priorities of an already running process\par
+    * sleep \endash  Delay for specified time\par
+    * time \endash  Time a command\par
+    * timex \endash  Time process shell execution, measure process data and system activity\par
+    * top \endash  Produce a dynamic list of all resident processes\par
+    * wait \endash  Wait for the specified process\par
+\par
+[edit] User management and support\par
+\par
+    * chsh \endash  Change user shell\par
+    * finger \endash  Get details about user\par
+    * id \endash  Print real/effective UIDs/GIDs\par
+    * last \endash  show listing of last logged in users\par
+    * lastlog \endash  show last log in information for users\par
+    * locale \endash  Get locale specific information\par
+    * localedef \endash  Compile locale definitions\par
+    * logname \endash  Print user's login name\par
+    * man \endash  Manual browser\par
+    * mesg \endash  Control write access to your terminal\par
+    * passwd \endash  Change user password\par
+    * su \endash  Start a new process (defaults to shell) as a different user (defaults to root)\par
+    * sudo \endash  execute a command as a different user.\par
+    * users \endash  Show who is logged on (only users names)\par
+    * w \endash  Show logged-in users and their current tasks\par
+    * whatis \endash  command description from whatis database\par
+    * whereis \endash  locates the command's binary and manual pages associated with it\par
+    * which (Unix) \endash  locates where a command is executed from\par
+    * who \endash  Show who is logged on (with some details)\par
+    * write \endash  Send a message to another user\par
+\par
+[edit] Terminal configuration\par
+\par
+    * stty \endash  Change and print terminal line settings\par
+    * tput \endash  Initialize a terminal/query terminfo database\par
+    * tty \endash  Print filename of terminal connected to standard input\par
+\par
+[edit] Files and texts\par
+\par
+    * info \endash  The GNU alternative to man\par
+    * man \endash  The standard unix documentation system\par
+\par
+[edit] Filesystem Utilities\par
+\par
+    * chattr \endash  Change file attributes on a Linux second extended file system\par
+    * chgrp \endash  Change the group of a file or directory\par
+    * chmod \endash  Change the permissions of a file or directory\par
+    * chown \endash  Change the owner of a file or directory\par
+    * cd \endash  Change to another directory location\par
+    * cp \endash  Copy a file or directory to another location\par
+    * df \endash  Report disk space\par
+    * dircmp \endash  Compare contents of files between two directories\par
+    * du \endash  Calculate used disk space\par
+    * fdupes \endash  Find or remove duplicate files within a directory\par
+    * find \endash  Search for files through a directory hierarchy\par
+    * fsck \endash  Filesystem check\par
+    * ln \endash  Link one file/directory to another\par
+    * ls \endash  List directory contents\par
+    * lsattr \endash  List file attributes on a Linux second extended file system\par
+    * lsof \endash  list open files\par
+    * mkdir \endash  Make a directory\par
+    * mkfifo \endash  Make a named pipe\par
+    * mount \endash  Mount a filesystem\par
+    * mv \endash  Move or rename a file or directory\par
+    * pwd \endash  Print the current working directory\par
+    * rm \endash  Delete a file or directory tree\par
+    * readlink \endash  Display value of a symbolic link, or display canonical path for a file\par
+    * rmdir \endash  Delete an empty directory\par
+    * touch \endash  Create a new file or update its modification time\par
+    * tree \endash  Print a depth-indented tree of a given directory\par
+    * unlink \endash  System call to remove a file or directory\par
+\par
+[edit] Archivers and compression\par
+\par
+    * afio \endash  Compatible superset of cpio with added functionality\par
+    * ar \endash  Maintain, modify, and extract from archives. Now largely obsoleted by tar\par
+    * bzip2 \endash  Block-sorting file compressor\par
+    * compress \endash  Traditional compressor using the LZW algorithm\par
+    * cpio \endash  A traditional archiving tool/format\par
+    * gzip \endash  The gzip file compressor\par
+    * p7zip \endash  7zip for unix/linux\par
+    * pax \endash  POSIX archive tool that handles multiple formats.\par
+    * tar \endash  Tape ARchiver, concatenates files\par
+    * uncompress \endash  Uncompresses files compressed with compress.\par
+    * zcat \endash  Prints files to stdout from gzip archives without unpacking them to separate file(s)\par
+\par
+[edit] Text Processing\par
+\par
+    * awk \endash  A pattern scanning and processing language\par
+    * banner \endash  Creates ascii art version of an input string for printing large banners\par
+    * cat \endash  Concatenate files to standard output\par
+    * cksum \endash  Print the CRC checksum and bytecount of a file (see also MD5)\par
+    * cmp \endash  Compare two files byte for byte\par
+    * comm \endash  Sort two files and compare them line for line\par
+    * csplit \endash  Split a file into sections determined by context lines\par
+    * cut \endash  Remove sections from each line of a file or standard input\par
+    * diff3 \endash  Compare one text file against two other files\par
+    * diff \endash  Compare two text files line by line\par
+    * egrep \endash  Extended pattern matching (synonym for "grep -E")\par
+    * expand \endash  Convert tabs to spaces\par
+    * fc \endash  Processes the command history list\par
+    * fgrep \endash  Simplified pattern matching (synonym for "grep -F")\par
+    * fold \endash  Wrap each input line to fit within the given width\par
+    * grep \endash  Print lines matching a pattern\par
+    * head \endash  Output the first parts of a file\par
+    * iconv \endash  Convert the encoding of the specified files\par
+    * join \endash  Join lines of two files on a common field\par
+    * less \endash  Improved more-like text pager\par
+    * merge \endash  Three way merge of files (see also paste)\par
+    * more \endash  Pager\par
+    * nkf \endash  Convert Japanese characters\par
+    * nl \endash  Number the lines of a file\par
+    * nroff \endash  Fixed-width (non-typesetter) version of the standard Unix typesetting system\par
+    * od \endash  Dump files in various formats, e.g. octal\par
+    * paste \endash  Merge lines of files\par
+    * patch \endash  Change files based on a patch file\par
+    * rev \endash  reverse lines of a file\par
+    * sed \endash  Stream EDitor\par
+    * sort \endash  Sort lines of text files\par
+    * split \endash  Split a file into pieces\par
+    * tac \endash  cat in reverse \emdash  displays files to standard output in reverse order starting at the end of the file\par
+    * tail \endash  Output the tail end of files\par
+    * tee \endash  Read from standard input, write to standard output and files\par
+    * tr \endash  Translate characters\par
+    * tsort \endash  Perform a topological sort\par
+    * unexpand \endash  Convert spaces to tabs\par
+    * uniq \endash  Remove duplicate lines from a sorted file\par
+    * uudecode \endash  Decodes a binary file that was used for transmission using electronic mail\par
+    * uuencode \endash  Encodes a binary file for transmission using electronic mail\par
+    * wc \endash  Word/line/byte count\par
+\par
+[edit] Text editors\par
+\par
+    * acme \endash  Bitmapped text editor and integrated development environment ported from the Plan 9 operating system with client-server design, by Rob Pike. This is the successor of sam.\par
+    * ed \endash  Original line-oriented, regular-expression based Unix text editor\par
+    * ex \endash  Line-oriented text editor from BSD Unix, originally derived from Unix ed, later augmented by a screen-oriented "visual" mode, creating vi; typically a symbolic link to vi (or vim) causing it to start up in line-editing mode\par
+    * GNU Emacs \endash  Freely programmable full-screen text editor and general computing environment (using builtin Elisp, a simple dialect of the Lisp programming language)\par
+    * Joe \endash  a screen-oriented text editor using a Wordstar-style command set\par
+    * Jove \endash  a screen-oriented text editor using an Emacs-style command set\par
+    * MicroEMACS \endash  a screen-oriented text editor using an Emacs-style command set\par
+    * nano \endash  Clone of pico (see below)\par
+    * NEdit \endash  A Motif based text editor for the X11 windowing system, remniscient of text editors on Mac or Windows systems\par
+    * nvi \endash  "New" vi, unencumbered (no remaining original Unix code) reimplementation of ex/vi for the 4.4BSD operating system release\par
+    * pico \endash  PIne's message COmposition editor (simple, easy to use screen editor)\par
+    * sam \endash  Bitmapped text editor ported from the Plan 9 operating system with client-server design, by Rob Pike\par
+    * vi \endash  "Visual" (screen-oriented) text editor (originally ex in screen-oriented "visual" mode)\par
+    * VILE \endash  "Vi like Emacs", a vi-like text editor that has been derived from the MicroEMACS text editor\par
+    * vim \endash  Vi IMproved, portable vi-compatible editor with multiple buffers, screen splitting, syntax highlighting and a lot of other features not found in standard ex/vi\par
+    * XEmacs \endash  Popular version of emacs that is derived from GNU Emacs\par
+\par
+[edit] Communication, networking and remote access\par
+\par
+    * Apache webserver\par
+    * efax \endash  integrated fax program\par
+    * HylaFAX \endash  Fax server\par
+    * netcat \endash  "TCP/IP Swiss Army knife"\par
+    * NFS \endash  Network filesystem\par
+    * OpenVPN \endash  virtual private (encrypting) networking software\par
+    * Postfix \emdash  mail transfer agent\par
+    * rsh, SSH, telnet \endash  Remote login\par
+    * Samba \endash  SMB and CIFS client and server for UNIX\par
+    * Sendmail \endash  popular E-Mail transport software\par
+    * talk \endash  Talk to another logged-in user\par
+    * uustat \endash  a Basic Networking Utilities (BNU) command that displays status information about several types of BNU operations\par
+    * uux \endash  Remote command execution over UUCP\par
+\par
+[edit] Email programs (user agents)\par
+\par
+    * elm \endash  (Once very popular) screen-oriented mail program\par
+    * mail \endash  Original Unix email program\par
+    * mailx/Mail \endash  Improved version of Unix mail from BSD Unix\par
+    * Mulberry \endash  powerful graphical IMAP-centric e-mail client (Proprietary Software)\par
+    * Mutt \endash  screen-oriented mail program\par
+    * Opera \endash  Web browser and e-mail client (Proprietary Software)\par
+    * Pine \endash  screen-oriented mail and news program, originally derived from elm\par
+    * Mozilla Thunderbird \endash  Extensible e-mail client\par
+\par
+[edit] Network system services\par
+\par
+    * fingerd \endash  a daemon for finger \endash  a program used return a human-readable status report on either the system at the moment or a particular person in depth\par
+    * inetd \endash  a daemon on many Unix systems that manages Internet services\par
+    * xinetd \endash  replacement for inetd\par
+\par
+[edit] Network Utilities\par
+\par
+    * dhclient \endash  the DHCP client\par
+    * dhcpd \endash  the DHCP daemon\par
+    * ifconfig \endash  a tool used to configure a network interface for TCP/IP\par
+    * iwconfig \endash  similar to ifconfig, but is dedicated to wireless networking interfaces\par
+    * ping \endash  a network tool that tests of whether a particular host is up and reachable on the network\par
+    * pppd \endash  Point-to-Point Protocol daemon\par
+    * tcpd \endash  Secures programs launched from inetd\par
+\par
+[edit] Network monitoring and security\par
+\par
+    * Ethereal and tethereal \endash  a feature rich protocol analyzer (now called Wireshark, see below)\par
+    * ettercap \endash  a tool for network protocol analysis\par
+    * John the Ripper \endash  password cracking software\par
+    * Nessus \endash  a comprehensive open-source network vulnerability scanning program\par
+    * Netstat \endash  displays a list of the active network connections the computer\par
+    * Nmap \endash  free port scanning software\par
+    * SATAN \endash  the Security Administrator Tool for Analyzing Networks \endash  a testing and reporting tool that collects information about networked hosts\par
+    * Snoop \endash  Solaris packet sniffer\par
+    * Snort \endash  an open source network intrusion detection system\par
+    * tcpdump \endash  a computer network debugging tool that intercepts and displays TCP/IP packets being transmitted or received\par
+    * Wireshark \endash  a protocol analyzer, or "packet sniffer", similar to tcpdump, that adds a GUI frontend, and more sorting and filtering options (formerly named Ethereal)\par
+    * ethereal \endash  network traffic analizer. It can be considered as GUI frontend of tcpdump utilities. Trafic can be filtured based on source and/or destination address and/or ports.\par
+\par
+[edit] Programming tools\par
+\par
+[edit] Script Interpreters\par
+\par
+[edit] Shells\par
+\par
+    * bash \endash  Bourne Again SHell, (mostly) sh-compatible and csh-compatible, standard shell on Linux systems and Mac OS X.\par
+    * csh \endash  C shell. Written by Bill Joy for BSD systems.\par
+    * ksh \endash  Korn shell, standard shell on many proprietary Unix systems, powerful successor to the Unix Bourne shell (sh), written by David Korn,\par
+    * rc \endash  originally written for Plan 9.\par
+    * sh \endash  Bourne shell, only shell present on all UNIX and Unix-like systems, written by Stephen Bourne for Version 7 Unix.\par
+    * tcsh \endash  TENEX C shell, standard shell on BSD systems.\par
+    * zsh \endash  Z shell.\par
+\par
+[edit] Non-shells\par
+\par
+    * awk \endash  Standard Unix pattern scanning and text processing tool.\par
+    * perl \endash  Perl scripting language.\par
+    * PHP \endash  PHP scripting language.\par
+    * Python \endash  Python scripting language.\par
+\par
+[edit] Compilers and Programming tools\par
+\par
+The classic UNIX environment includes a basic set of broadly available programming tools, but in the 21st century this classic environment is increasingly rare, as Unix-like operating system distributions diversify. Some include vastly more, and more modern and sophisticated, programming tools and environments, whereas others, focussing on serving a less technical audience, may exclude even the most rudimentary programming utilities. Commands most familiar to a prior generation of UNIX users include:\par
+\par
+    * admin \endash  Administer SCCS files.\par
+    * as \endash  GNU assembler tool.\par
+    * c99 \endash  C programming language.\par
+    * cc \endash  C compiler.\par
+    * cfront \endash  C++ front-end compiler\par
+    * ctags \endash  Generate tags file summarising location of objects in source files.\par
+    * dbx \endash  (System V and BSD) Symbolic debugger.\par
+    * distcc \endash  Tool for distributing compiles across multiple machines.\par
+    * f77 \endash  Fortran 77 compiler.\par
+    * gcc \endash  GNU Compiler Collection C frontend (also known as GNU C Compiler)\par
+    * gdb \endash  GNU symbolic debugger.\par
+    * ktrace \endash  (BSD) Analogous to strace.\par
+    * ld \endash  Program linker.\par
+    * lex \endash  Lexical scanner generator.\par
+    * ltrace \endash  (Linux) Trace dynamic library calls in the address space of the watched process.\par
+    * m4 \endash  Macro language.\par
+    * make \endash  Automate builds.\par
+    * nm \endash  List symbols from object files.\par
+    * rmdel \endash  remove a delta from an SCCS file.\par
+    * size \endash  return the size of the sections of an ELF file.\par
+    * strace \endash  (Linux) or truss (Solaris) Trace system calls with their arguments and signals. Useful debugging tool, but does not trace calls outside the kernel, in the address space of the process(es) being watched.\par
+    * strip \endash  Remove debugging symbols from object files.\par
+    * yacc \endash  LALR parser generator.\par
+\par
+[edit] Scripting utilities\par
+\par
+    * basename \endash  Returns the final component of a path\par
+    * batch \endash  Runs jobs when the system load level permits\par
+    * false \endash  Return a value that evaluates as False\par
+    * hash \endash  Command that remembers or reports command path names\par
+    * strings \endash  Print strings of printable characters found in a file\par
+    * test \endash  Test an expression\par
+    * times\par
+    * true \endash  Return a value that evaluates as True\par
+    * unset \endash  Unsets a shell variable\par
+    * xargs \endash  Build and execute command lines from standard input\par
+    * expr \endash  Evaluate expressions\par
+\par
+[edit] User interfaces\par
+\par
+    * X11 \endash  Graphical user interface (GUI)\par
+          o startx and xinit\par
+          o xterm\par
+\par
+[edit] Desktops/G\par
+}
+ 
