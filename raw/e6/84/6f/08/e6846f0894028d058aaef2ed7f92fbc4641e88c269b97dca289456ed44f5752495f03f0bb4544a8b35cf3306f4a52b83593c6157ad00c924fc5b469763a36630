@@ -1,0 +1,61 @@
+基于虚拟用户的FTP服务
+
+一、建立虚拟用户的账号数据库
+	rpm安装db4—utils软件包
+	创建文本格式的用户名、密码列表
+		vim /etc/vsftpd/vusers.list
+		mike					//奇数行为用户名
+		123					//偶数行为上一行用户的密码
+		john
+		456
+	创建Berkeley DB格式的数据库文件
+		cd /etc/vsftpd
+		db_load -T -t hash -f vusers.list vusers.db
+		在db_load命令中，“-f”选项用于指定数据源文件，“-T”选项允许非Berkeley DB
+	    的应用程序使用从文本格式的DB数据文件，“-t hash”选项指定读取数据文件的基本方法。
+
+		为提高虚拟用户账号文件的安全性，应将文件权限设置为600，以免数据外泄
+		chomd 600 /etc/vsftpd/vusers.*
+		ls -lh /etc/vsftpd/vusers.*
+	添加虚拟用户的映射账号、创建FTP根目录
+		vsftpd服务器对虚拟用户的控制采用了映射的控制方式，将所有的虚拟用户对应到同一
+	    个系统用户，该系统用户宿主目录作为所有虚拟用户登录后公用的FTP根目录。因此还需要添
+	    加一个对应的系统用户账号（此账号无需设置密码及登录shell），例如，若要将使用的FTP
+	    根目录设为/var/ftproot,映射账号的名称为 virtual，可以执行以下操作
+		useradd -d /var/ftproot -s /sbin/nologin virtual
+		chmod 755 /var/ftproot			//调整权限以允许浏览目录
+	为虚拟用户建立PAM认证文件
+		vsftpd服务默认的PAM认证文件位于/etc/pam.d/vsftpd，该文件适用于以Linux主机的系
+	    统用户账号进行认证。若要读取用户的账号数据文件，就要创建新的PAM认证配置。例如，可以
+	    参考余下内容在/etc/pam.d目录下建立一个名为vsftpd.vu的PAM认证文件，用于虚拟用户认证
+	    控制。
+		vim /etc/pam.d/vsftpd.vu
+		#%PAM-1.0
+		auth	required	pam_userdb.so db=/etc/vsftpd/vusers
+		account	required	pam_userdb.so db=/etc/vsftpd/vusers
+	修改vsftpd配置，添加虚拟用户支持
+		vim /etc/vsftpd/vsftpd.conf
+		……//省略部分内容
+		local_enable=YES			//需映射本地用户，所以启用此项
+		write_enable=YES			//启用上传写入支持
+		anon_umask=022				//指定上传权限掩码
+		guest_enable=YES			//启用用户映射功能
+		guest_username=virtual			//指定映射的系统用户名称
+		pam_service_name=vsftpd.vu		//指定新的PAM认证文件
+	为不同的虚拟用户建立独立的配置文件
+		vi /etc/vsftpd/vsftpd.conf
+		……//省略部分内容
+		user_config_dir=/etc/vsftpd/vusers_dir
+		有了上述配置以后，就可以在/etc/vsftpd/vusers_dir/目录下为每个虚拟用户分别建立
+	    配置文件了。例如，若要使虚拟用户john能够上传文件、创建目录，而mike仍然只有默认的下载
+	    权限，可以执行以下操作。
+		mkdir /etc/vsftpd/vusers_dir/		//创建用户配置文件夹
+		cd /etc/vsftpd/vusers_dir
+		vim john				//为用户John创建独立的配置文件
+		anon_upload_enable=YES
+		anon_mkdir_write_enable=YES
+		touch mike				//为其他用户创建空的配置文件
+		service vsftpd reload			//重新加载配置
+		mike用户可以登录，并能够正常浏览、下载文件，但不能上传文件
+		John用户可以登录，且可以正常浏览、下载文件，也可以上传文件
+		Linux主机中的系统用户将无法登陆
