@@ -1,0 +1,62 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+void
+getWeight(int *indi,int leng,int kk,int nn,int hh,int pp,
+		double **w_ih,double **w_ho)
+{
+
+	int i,j,s;
+	int tem;
+	double max;
+
+	/* check the individual vector has the correct dim */
+	tem=((nn+1)*hh+(hh+1)*pp)*kk;
+	if (tem!=leng)
+	{
+		printf("something wrong with the length in getW.c \n");
+		exit(1);
+	}
+
+	/* get the maximum value KK bits can represent */
+	max=0.0;
+	for (i=0;i<kk;i++)
+		max +=pow(2.0,i);
+
+	/* calculate weight_ih */
+	tem=0;
+	for (i=0;i<hh;i++)
+	{
+		for (j=0;j<(nn+1);j++)
+		{
+			w_ih[i][j]=0.0;
+			for (s=0;s<kk;s++)
+			{
+				w_ih[i][j]+=(pow(2.0,s))*indi[tem];
+				tem++;
+			}
+			w_ih[i][j]=(((2*w_ih[i][j])/max)-1.0)*10.0;
+			/* w_ih[i][j]=((2*w_ih[i][j])/max)-1.0; */
+		}
+	}
+
+	/* calculate weight_ho */
+
+	for (i=0;i<pp;i++)
+	{
+		for (j=0;j<(hh+1);j++)
+		{
+			w_ho[i][j]=0.0;
+			for (s=0;s<kk;s++)
+			{
+				w_ho[i][j]+=(pow(2.0,s))*indi[tem];
+				tem++;
+			}
+			w_ho[i][j]=((2*w_ho[i][j])/max-1)*10.0;
+			
+		}
+	}
+}
+
+
